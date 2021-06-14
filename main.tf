@@ -10,8 +10,3 @@ resource "ibm_is_lb" "loadbalancer" {
   resource_group  = var.resource_group_id
   tags            = (var.tags != null ? var.tags : [])
 }
-
-data "ibm_is_lb" "loadbalancer" {
-  depends_on = [ibm_is_lb.loadbalancer]
-  name = var.name
-}

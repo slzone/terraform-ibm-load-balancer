@@ -12,7 +12,7 @@ variable "create_load_balancer" {
 variable "name" {
   type        = string
   description = "The name of load balancer"
-  default     = "loadbalancer"
+  default     = ""
 }
 
 variable "type" {
