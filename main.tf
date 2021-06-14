@@ -12,5 +12,6 @@ resource "ibm_is_lb" "loadbalancer" {
 }
 
 data "ibm_is_lb" "loadbalancer" {
+  depends_on = [ibm_is_lb.loadbalancer]
   name = var.name
 }
