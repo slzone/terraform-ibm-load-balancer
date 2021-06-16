@@ -93,9 +93,9 @@ variable "subnets_acl_rules" {
   default     = "[]"
 }
 
-variable "create_load_balancer" {
-  description = "set true to create, false to skip"
+variable "provision" {
   type        = bool
+  description = "set true to create, false to skip"
   default     = true
 }
 
