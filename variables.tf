@@ -32,6 +32,12 @@ variable "profile" {
   default     = null
 }
 
+variable "logging" {
+   description = "Logging of Load Balancer. Conflicts with 'profile'"
+   type        = bool
+   default     = null
+ }
+
 variable "resource_group_id" {
   description = "Resource group ID"
   type        = string
