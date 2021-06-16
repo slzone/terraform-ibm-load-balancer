@@ -3,9 +3,9 @@ variable "ibmcloud_api_key" {
   description = "The IBM Cloud api token"
 }
 
-variable "create_load_balancer" {
-  description = "set true to create, false to skip"
+variable "provision" {
   type        = bool
+  description = "set true to create, false to skip"
   default     = true
 }
 
@@ -29,12 +29,6 @@ variable "subnets" {
 variable "profile" {
   description = "The profile to use for this load balancer. Conflicts with 'logging'"
   type        = string
-  default     = null
-}
-
-variable "logging" {
-  description = "Logging of Load Balancer. Conflicts with 'profile'"
-  type        = bool
   default     = null
 }
 
