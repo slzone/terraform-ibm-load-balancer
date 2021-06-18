@@ -1,6 +1,5 @@
-resource "ibm_is_lb" "loadbalancer" {
-  count           = (var.provision ? 1 : 0)
-
+resource "ibm_is_lb" "lbs" {
+  count           = (var.provision ? 1 : 0) 
   name            = var.name
   subnets         = var.subnets
   type            = var.type != null ? var.type : "public"
