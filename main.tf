@@ -2,7 +2,6 @@ resource "ibm_is_lb" "lbs" {
   count           = (var.mgmt_load_balancer_provision ? 1 : 0) 
   name            = var.name
   subnets         = var.subnets
-  region          = var.region
   type            = var.type != null ? var.type : "public"
   security_groups = (var.security_groups != null ? var.security_groups : [])
   profile         = (var.profile != null && var.logging == null ? var.profile : null)
