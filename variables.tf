@@ -3,7 +3,7 @@ variable "ibmcloud_api_key" {
   description = "The IBM Cloud api token"
 }
 
-variable "mgmt_load_balancer_provision" {
+variable "load_balancer_provision" {
   type        = bool
   description = "set true to create, false to skip"
   default     = true
