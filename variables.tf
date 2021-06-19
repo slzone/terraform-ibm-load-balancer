@@ -3,11 +3,6 @@ variable "ibmcloud_api_key" {
   description = "The IBM Cloud api token"
 }
 
-variable "region" {
-  type        = string
-  description = "Geographic location of the resource (e.g. us-south, us-east)"
-}
-
 variable "mgmt_load_balancer_provision" {
   type        = bool
   description = "set true to create, false to skip"
