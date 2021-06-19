@@ -6,10 +6,9 @@ variable "ibmcloud_api_key" {
 variable "region" {
   type        = string
   description = "Geographic location of the resource (e.g. us-south, us-east)"
-  default = "au-syd"
 }
 
-variable "provision" {
+variable "mgmt_load_balancer_provision" {
   type        = bool
   description = "set true to create, false to skip"
   default     = true
@@ -17,7 +16,7 @@ variable "provision" {
 
 variable "name" {
   type        = string
-  description = "vpc load balancer name"
+  description = "The name of load balancer"
   default     = ""
 }
 
@@ -41,6 +40,7 @@ variable "profile" {
 variable "resource_group_id" {
   description = "Resource group ID"
   type        = string
+  default     = "slz-rg"
 }
 
 variable "tags" {
@@ -54,7 +54,7 @@ variable "logging" {
   type        = list(string)
   default     = []
 }
-
+ 
 variable "security_groups" {
   description = "Load Balancer securitygroups list"
   type        = list(string)
