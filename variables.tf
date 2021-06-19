@@ -3,6 +3,11 @@ variable "ibmcloud_api_key" {
   description = "The IBM Cloud api token"
 }
 
+variable "region" {
+  type        = string
+  description = "Geographic location of the resource (e.g. us-south, us-east)"
+}
+
 variable "provision" {
   type        = bool
   description = "set true to create, false to skip"
@@ -32,12 +37,6 @@ variable "profile" {
   default     = null
 }
 
-variable "logging" {
-   description = "Logging of Load Balancer. Conflicts with 'profile'"
-   type        = bool
-   default     = null
- }
-
 variable "resource_group_id" {
   description = "Resource group ID"
   type        = string
@@ -50,9 +49,14 @@ variable "tags" {
   default     = []
 }
 
+variable "logging" {
+  description = "List of Tags for the Load Balancer"
+  type        = list(string)
+  default     = []
+}
+
 variable "security_groups" {
   description = "Load Balancer securitygroups list"
   type        = list(string)
   default     = []
 }
-
