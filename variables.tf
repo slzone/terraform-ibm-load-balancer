@@ -6,6 +6,7 @@ variable "ibmcloud_api_key" {
 variable "region" {
   type        = string
   description = "Geographic location of the resource (e.g. us-south, us-east)"
+  default = "au-syd"
 }
 
 variable "provision" {
