@@ -16,7 +16,7 @@ variable "provision" {
 
 variable "name" {
   type        = string
-  description = "The name of load balancer"
+  description = "vpc load balancer name"
   default     = ""
 }
 
@@ -40,7 +40,6 @@ variable "profile" {
 variable "resource_group_id" {
   description = "Resource group ID"
   type        = string
-  default     = "slz-rg"
 }
 
 variable "tags" {
