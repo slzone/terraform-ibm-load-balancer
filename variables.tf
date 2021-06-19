@@ -15,6 +15,11 @@ variable "name" {
   default     = ""
 }
 
+variable "region" {
+  type        = string
+  description = "Geographic location of the resource (e.g. us-south, us-east)"  
+}
+
 variable "type" {
   description = "nlb type: public/private"
   type        = string
